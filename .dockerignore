@@ -1,0 +1,19 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+# Python
+medusa_light/__pycache__/
+medusa_light/*/__pycache__/
+medusa_light/*/*/__pycache__/
+medusa_light/*/*/*/__pycache__/
+.env/
+.venv/
+venv/
+
+# Local PostgreSQL data
+data/
+data_static/

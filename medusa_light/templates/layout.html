@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>News</title>
+</head>
+<style>
+	.nav {
+		padding:0px;
+		margin: 0px;
+		list-style-type: none;
+	}
+	.nav li {
+		display: inline-block;
+  		padding: 5px;
+	}
+</style>
+<body>
+	<ul class="nav">
+		<li><a href="{% url 'news_app:homeviews' %}">Home</a></li>
+		<li><a href="{% url 'news_app:addnews' %}">Add News</a></li>
+		<li><a href="{% url 'news_api:api' %}">API</a></li>
+	</ul>
+{% block content %}
+{% endblock %}
+</body>
+</html>

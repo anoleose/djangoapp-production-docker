@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h3>News</h3>
+{% for items in news %}
+<h5>{{ items.title|capfirst }}</h5>
+<p>{{ items.content }}</p>
+<small>published: {{ items.created_at|date:"d.m.Y" }}</small>
+{% empty %}
+<p>Not news yet</p>
+{% endfor %}
+{% endblock %}
