@@ -4,9 +4,9 @@ services:
   db:
     image: postgres:13-alpine
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=namedb
+      - POSTGRES_USER=userdb
+      - POSTGRES_PASSWORD=dbpass
     
   web:
     build: .
@@ -15,12 +15,12 @@ services:
       - ./medusa_light:/medusa_light_project
       - ./data_static/web:/vol/web
     environment:
-      - SECRET_KEY=django-insecure-q&j246(1x2-zymmkhv+j*zdmw22_q2+l-(zhc$cvu2-=sp0(@8
+      - SECRET_KEY=django-insecure-q&j246(1x2-zymmkhv
       - DEBUG=1
       - DB_HOST=db
-      - DB_NAME=postgres
-      - DB_USER=postgres
-      - DB_PASS=postgres
+      - DB_NAME=namedb
+      - DB_USER=userdb
+      - DB_PASS=dbpass
     ports:
       - "8000:8000"
     depends_on:
